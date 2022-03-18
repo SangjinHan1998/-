@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta charset = "UTF-8">
+        <title> 이미지 슬라이드3(좌우)</title>
+        <link rel = "stylesheet" href = "css1_1/css012.css">
+    </head>
+
+    <body>
+        <div id = "wrap">
+            <header id = "header" class = "clearfix">
+                <h1 class = "logo">로고</h1>
+                <nav class = "nav">메뉴</nav>
+            </header>
+       <section id = "banner">
+           <div class = "slideList">
+               <div class = "slideImg">
+                <h3>좌우이미지1</h3>   
+                <img src = "image1/img1.jpg" alt = "image1">
+            </div>
+            <div class = "slideImg">
+                <h3>좌우이미지2</h3>   
+                <img src = "image1/img2.jpg" alt = "image2">
+            </div>
+            <div class = "slideImg">
+                <h3>좌우이미지3</h3>   
+                <img src = "image1/img3.jpg" alt = "image3">
+            </div>
+           </div>
+       </section>
+
+        <section id = "contents">
+            <div class = "cont1">공지사항</div>
+            <div class = "cont2">갤러리</div>
+            <div class = "cont3">팝업</div>
+        </section>
+
+        <footer id = "footer">
+            <div class = "foot1">로고</div>
+            <div class = "foot2">Copyright</div>
+            <div class = "foot3">SNS</div>
+
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        var slideCount = $(".slideImg").length;
+        var currentIndex = 0;
+        var slidePosition;
+
+        setInterval(function(){
+            if (currentIndex < slideCount - 1) {
+                currentIndex++;
+            }   else {
+                currentIndex = 0;
+            }
+
+            slidePosition = currentIndex  * (-1200)+"px";
+            $(".slideList").animate({left:slidePosition}, 400);
+        },3000);
+    </script>
+
+    </body>
+</html>

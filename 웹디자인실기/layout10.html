@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta charset = "UTF-8">
+        <title> 이미지 슬라이드1</title>
+        <link rel = "stylesheet" href = "css1_1/css010.css">
+    </head>
+
+    <body>
+        <div id = "wrap">
+            <header id = "header" class = "clearfix">
+                <h1 class = "logo">로고</h1>
+                <nav class = "nav">
+                    <ul>
+                        <li><a href = "#">Menu-1</a>
+                            <ul class = "submenu">
+                                <li><a href = "#">Submenu1</a></li>
+                                <li><a href = "#">Submenu2</a></li>
+                                <li><a href = "#">Submenu3</a></li>
+                                <li><a href = "#">Submenu4</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href = "#">Menu-2</a>
+                            <ul class = "submenu">
+                                <li><a href = "#">Submenu1</a></li>
+                                <li><a href = "#">Submenu2</a></li>
+                                <li><a href = "#">Submenu3</a></li>
+                                <li><a href = "#">Submenu4</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href = "#">Menu-3</a>
+                            <ul class = "submenu">
+                                <li><a href = "#">Submenu1</a></li>
+                                <li><a href = "#">Submenu2</a></li>
+                                <li><a href = "#">Submenu3</a></li>
+                                <li><a href = "#">Submenu4</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href = "#">Menu-4</a>
+                            <ul class = "submenu">
+                                <li><a href = "#">Submenu1</a></li>
+                                <li><a href = "#">Submenu2</a></li>
+                                <li><a href = "#">Submenu3</a></li>
+                                <li><a href = "#">Submenu4</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        <section id = "banner">
+            <div class = "slideList">
+                <div class = "slideImg">
+                    <h2>이미지 1</h2>
+                    <img src = "image1/img1.jpg" alt = "image">
+                </div>
+                <div class = "slideImg">
+                    <h2>이미지 2</h2>
+                    <img src = "image1/img2.jpg" alt = "image">
+                </div>
+                <div class = "slideImg">
+                    <h2>이미지 3</h2>
+                    <img src = "image1/img3.jpg" alt = "image">
+                </div>
+            </div>
+        </section>
+
+        <section id = "contents">
+            <div class = "cont1">공지사항</div>
+            <div class = "cont2">갤러리</div>
+            <div class = "cont3">팝업</div>
+        </section>
+
+        <footer id = "footer">
+            <div class = "foot1">로고</div>
+            <div class = "foot2">Copyright</div>
+            <div class = "foot3">SNS</div>
+
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+       $(".nav > ul > li").mouseover(function(){
+           $(this).find(".submenu").stop().slideDown(200);
+       })
+       $(".nav > ul > li").mouseout(function(){
+        $(this).find(".submenu").stop().slideUp(200);
+        })
+       
+    </script>
+    <script>
+        var currentIndex = 0;
+
+        setInterval(function(){
+            if(currentIndex < 2) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+
+            var slidePosition = currentIndex * (-400) + "px";
+            $(".slideList").animate({top:slidePosition}, 400)
+        }, 3000);
+    </script>
+
+    </body>
+</html>

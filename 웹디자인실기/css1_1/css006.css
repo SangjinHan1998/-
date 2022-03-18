@@ -1,0 +1,37 @@
+* {margin: 0; padding: 0; font-size: 24px;}
+a {color: #333; text-decoration: none;}
+li {list-style: none;}
+table {border-spacing: 0;}
+.clearfix::before, .clearfix::after {display: block; content: ''; clear: both; }
+
+/*layout*/
+#wrap {width: 1200px; margin: 0px auto;}
+#side {float: left; width: 300px; height: 650px; background: #5BAD24;}
+#content   {float: left; width: 900px; height: 650px; background: #72B843;}
+
+/*header*/
+#side {text-align: center;}
+#side .logo {width: 300px; height: 150px; background: #3BAD24;}
+#side .nav  {width: 300px; height: 500px; background: #5BAD00;}
+#side .nav li  {text-align: center; background: #52AD16;}
+#side .nav li a {padding: 10px; display: block; color: #4AADO8; background: rgba(0,0,0,0.3);}
+#side .nav li a:hover {background: rgba(0,0,0,0.4);}
+#side .nav li ul.submenu {display: none;}
+
+/*banner*/
+#banner {width: 900px; text-align: center; height: 350px; line-height: 350px; background: #89C462;}
+
+/*contents*/
+#contents   {width: 900px;}
+#contents > div {float: left; width: 33.33333%; height: 200px; line-height: 200px; text-align: center;}
+#contents > div.cont1 {background: #A1D081;}
+#contents > div.cont2 {background: #B2D181;}
+#contents > div.cont3 {background: #C3D281;}
+
+/*footer*/
+#footer {width: 900px; text-align: center;}
+#footer .foot1 {float: left; width: 200px; height: 100px; line-height: 100px; background:#7BEA30;}
+#footer .foot2 {float: left; width: 700px; height: 50px; line-height: 50px; background:#70DA30;}
+#footer .foot3 {float: left; width: 700px; height: 50px; line-height: 50px; background:#65C128;}
+
+
